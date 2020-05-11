@@ -6,9 +6,12 @@ without arguments.
 Create new function and use it as default parameter.
 */
 
-"use strict";
+const noArgument = () => {
+  throw new Error('Function requires one argument');
+};
 
-function square(a) {
+// function square(a) {
+function square(a = noArgument()) {
   console.log(a * a);
 }
 
